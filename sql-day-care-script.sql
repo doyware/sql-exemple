@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `day_care_center` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `day_care_center`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: day_care_center
@@ -46,6 +48,31 @@ LOCK TABLES `child` WRITE;
 INSERT INTO `child` VALUES (1,'chik','2019-10-03','2023-10-01','Abdou','Gross','2020-10-01',1),(2,'chik','2019-10-03','2023-10-01','Xavier','Gross','2020-10-01',1),(3,'chik','2019-10-03','2023-10-01','Xavier','Gross','2020-10-01',1),(4,'chik','2019-10-03','2023-10-01','Makhou L.','Khoule','2020-10-01',1),(5,'private','2019-10-03','2023-10-01','Modou Samam.','Khoule','2020-10-01',2);
 /*!40000 ALTER TABLE `child` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `daycareworker`
+--
+
+DROP TABLE IF EXISTS `daycareworker`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `daycareworker` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `daycareworker`
+--
+
+LOCK TABLES `daycareworker` WRITE;
+/*!40000 ALTER TABLE `daycareworker` DISABLE KEYS */;
+INSERT INTO `daycareworker` VALUES (1,'Moussa','Cisse'),(2,'Modou Samam.','Khoule');
+/*!40000 ALTER TABLE `daycareworker` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -56,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-09 19:10:03
+-- Dump completed on 2021-02-10 22:06:33
